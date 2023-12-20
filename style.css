@@ -44,7 +44,7 @@ body, html {
   border: 3px solid #000;
   background-color: #FCFD97;
   padding: 20px;
-  /*box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);*/
+  box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.5);
   z-index: 1; /* Ensure it's on top of other elements */
 }
 /*.landing-container::before {
