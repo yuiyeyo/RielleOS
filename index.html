@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  <title>Your Web Page</title>
+</head>
+<body>
+  
+  <div id="landing-container" class="landing-container draggable">
+    <div class="landing-header">
+      <span class="close-button" onclick="closePopup()">X</span>
+    </div>
+    <div class="landing-content">
+      <p class="welcometo">Welcome to</p>
+      <p class="rielleos">RielleOS</p>
+      <p class="landingnotes">Feel free to navigate around by clcking the app icons! <br> This operatinasjdhaskjdh <br> tutup pake x di atas btw</p>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+  <!-- Clickable texts -->
+  <div class="menus" onclick="handleMenuClick(1)">Profile</div>
+  <div class="menus" onclick="handleMenuClick(2)">Programming<br>Experiences</div>
+  <div class="menus" onclick="handleMenuClick(3)">Moderating<br>Experiences</div>
+  <div class="menus" onclick="handleMenuClick(4)">GitHub</div>
+  <div class="menus" onclick="handleMenuClick(5)">LinkedIn</div>
+  <div class="menus" onclick="handleMenuClick(6)">E-Mail</div>
+
+  <!-- Taskbar -->
+  <div class="taskbar"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
