@@ -1,4 +1,4 @@
-body {
+body, html {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -11,8 +11,8 @@ body {
 }
 
 .taskbar {
-  width: 1440px;
-  height: 72px;
+  width: 100%;
+  height: 10%;
   flex-shrink: 0;
   border: 3px solid #000;
   background: #FFDA58;
@@ -95,7 +95,7 @@ body {
 
 }
 
-/* Add more styles as needed */
+ Add more styles as needed 
 .menus {
   text-align: center;
   margin: 10px;
