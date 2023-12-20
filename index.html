@@ -10,7 +10,7 @@
 <body>
   <div id="landing-container" class="landing-container draggable">
     <div class="landing-header">
-      <span class="close-button" onclick="closePopup()">X</span>
+      <span class="close-button" onclick="closeLanding()" style="background-color: #F76D6F; border: 3px solid black";>X</span>
     </div>
     <div class="landing-content">
       <p class="landingtitle">Landing Page</p>
@@ -22,11 +22,40 @@
 
 
   <script src="script.js"></script>
-  <!-- Clickable texts -->
-  <div> <a class="menus" onclick="handleMenuClick(1)"><span class=space></span>Profile</a><a class="menus" onclick="handleMenuClick(4)"><span class=space></span><span class=space></span><span class=space></span>GitHub </a></div>
-  <div> <a class="menus" onclick="handleMenuClick(2)">Programming<br>Experiences</a> <a class="menus" onclick="handleMenuClick(5)">LinkedIn</a></div>
-  <div> <a class="menus" onclick="handleMenuClick(3)">Moderating<br>Experiences</a> <a class="menus" onclick="handleMenuClick(6)"><span class=space></span>E-Mail</a></div>
+    <div class="image-container">
+      <a href="#" class="image-button" onclick="showWindow()">
+        <img src="https://raw.githubusercontent.com/yuiyeyo/RielleOS/main/assets/Profile.png" alt="Profile" width=50>
+      </a>
+      <a href="#" class="image-button">
+      <img src="https://raw.githubusercontent.com/yuiyeyo/RielleOS/main/assets/linkedin.png" alt="LinkedIn" width=50 >
+      </a>
+    </div>
 
+  <div class="image-container">
+    <a href="#" class="image-button">
+      <img src="https://raw.githubusercontent.com/yuiyeyo/RielleOS/main/assets/Github.png" alt="github" width=48>
+    </a>
+
+    <a href="#" class="image-button">
+    <img src="https://raw.githubusercontent.com/yuiyeyo/RielleOS/main/assets/email.png" alt="email" width=47 >
+    </a>  
+  </div>
+  <div class="image-container">
+    <a href="#" class="image-button">
+      <img src="https://raw.githubusercontent.com/yuiyeyo/RielleOS/main/assets/prog%20exp.png" alt="prgexp" width=70>
+    </a>
+  </div>
+  <div class="image-container">
+    <a href="#" class="image-button">
+      <img src="https://raw.githubusercontent.com/yuiyeyo/RielleOS/main/assets/Moderating%20exp.png" alt="mdrexp" width=70>
+    </a>
+  </div>
+
+
+
+    <div id="window-container">
+      <span class="close-button" onclick="closeWindow()">X</span>
+    </div>
   
   
 
