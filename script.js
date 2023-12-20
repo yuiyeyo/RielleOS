@@ -34,3 +34,24 @@ function makeDraggable(element) {
     isDragging = false;
   });
 }
+
+// Function to update the clock time
+function updateClock() {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  // Add leading zero if single digit
+  hours = hours < 10 ? '0' + hours : hours;
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  
+  var timeString = hours + ':' + minutes ;
+
+  // Update the content of the #clock element
+  document.getElementById('clock').innerHTML = timeString;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Call updateClock() to initialize the clock immediately
+updateClock();
