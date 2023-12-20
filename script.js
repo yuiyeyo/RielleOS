@@ -10,8 +10,19 @@ function showLanding() {
   makeDraggable(document.getElementById('landing-container'));
 }
 
-function closePopup() {
+function closeLanding() {
   document.getElementById('landing-container').style.display = 'none';
+}
+
+function showWindow() {
+  document.getElementById('window-container').style.display = 'block';
+
+  // Make the popup draggable
+  makeDraggable(document.getElementById('window-container'));
+}
+
+function closeWindow() {
+  document.getElementById('window-container').style.display = 'none';
 }
 
 function makeDraggable(element) {
