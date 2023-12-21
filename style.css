@@ -14,8 +14,10 @@ body, html {
   position: fixed;
   bottom: 0;
   right: 0;
+  color: #FE69B3;
   margin-top: 90%; /* Adjust margin as needed */
-  margin-left: 15px;
+  margin-left: 10%;
+  margin-bottom: 1%;
   font-size: 12px;
   /*background-color: #f0f0f0;*/
   /*padding: 10px;
@@ -166,5 +168,5 @@ body, html {
 
 .space {
   display: inline-block;
-  width: 20px; 
+  width: 5px; 
 }
