@@ -8,6 +8,7 @@ function showLanding() {
 
   // Make the popup draggable
   makeDraggable(document.getElementById('landing-container'));
+  makeResizable(document.getElementById('landing-container'));
 }
 
 function closeLanding() {
@@ -44,6 +45,46 @@ function makeDraggable(element) {
   document.addEventListener('mouseup', function () {
     isDragging = false;
   });
+}
+
+function makeResizable(element) {
+  let isResizing = false;
+  let startX, startY, startWidth, startHeight;
+
+  const handle = document.createElement('div');
+  handle.style.width = '10px';
+  handle.style.height = '10px';
+  handle.style.background = '#000';
+  handle.style.position = 'absolute';
+  handle.style.bottom = '0';
+  handle.style.right = '0';
+  handle.style.cursor = 'se-resize';
+
+  element.appendChild(handle);
+
+  handle.addEventListener('mousedown', function (e) {
+    isResizing = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    startWidth = parseInt(document.defaultView.getComputedStyle(element).width, 10);
+    startHeight = parseInt(document.defaultView.getComputedStyle(element).height, 10);
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', () => {
+      isResizing = false;
+      document.removeEventListener('mousemove', handleMouseMove);
+    });
+  });
+
+  function handleMouseMove(e) {
+    if (isResizing) {
+      const width = startWidth + e.clientX - startX;
+      const height = startHeight + e.clientY - startY;
+
+      element.style.width = width + 'px';
+      element.style.height = height + 'px';
+    }
+  }
 }
 
 // Function to update the clock time
